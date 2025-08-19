@@ -1,7 +1,7 @@
 \documentclass[sigconf]{acmart}
 
 %%
-%% \BibTeX command to typeset BibTeX logo in the docs
+%% \BibTeX command to types. BibTeX logo in the docs
 \AtBeginDocument{\providecommand\BibTeX{{Bib\TeX}}}
 
 %%
@@ -10,16 +10,13 @@
 %% values in them; it is your responsibility as an author to replace
 %% the commands and values with those provided to you when you
 %% complete the rights form.
-\setcopyright{acmlicensed}
 \copyrightyear{2025}
 \acmYear{2025}
-\acmDOI{10.1145/XXXXXX.XXXXXX}
-
-%%
-%% These commands are for a PROCEEDINGS abstract or paper.
-\acmConference[ACM Multimedia MMFood'25]{ACM International Conference on Multimedia: Multi-modal Food Computing Workshop}{October 27--31, 2025}{Dublin, Ireland}
-\acmBooktitle{Proceedings of the 1st International Workshop on Multi-modal Food Computing (MMFood '25), October 27--31, 2025, Dublin, Ireland}
-\acmISBN{979-8-4007-2046-8/2025/10} 
+\setcopyright{acmlicensed}
+\acmConference[MMFood '25]{Proceedings of the 1st International Workshop on Multi-modal Food Computing}{October 27--28, 2025}{Dublin, Ireland}
+\acmBooktitle{Proceedings of the 1st International Workshop on Multi-modal Food Computing (MMFood '25), October 27--28, 2025, Dublin, Ireland}
+\acmDOI{10.1145/3746264.3760499}
+\acmISBN{979-8-4007-2046-8/2025/10}
 
 %%
 %% end of the preamble, start of the body of the document source.
@@ -51,12 +48,12 @@
 
 \author{Lipika Dey}
 \email{lipika.dey@ashoka.edu.in}
-\orcid{0000−0003−3831−5545}
+\orcid{0000-0003-3831-5545}
 \authornotemark[2]
 
 \author{Partha Pratim Das}
 \email{partha.das@ashoka.edu.in}
-\orcid{0000−0003−1435−6051}
+\orcid{0000-0003-1435-6051}
 
 \affiliation{%
   \institution{Ashoka University}
@@ -116,6 +113,7 @@
 %%
 %% Keywords. The author(s) should pick words that accurately describe
 %% the work being presented. Separate the keywords with commas.
+
 \keywords{Food Computing, Domain-specific Languages, Recipe Formalization, Semantic Modeling, Action-Graphs}
 
 \received{19 July 2025}
@@ -140,7 +138,7 @@ Early formalizations treated recipes as ordered imperative lists mapped to first
 
 Subsequent work sought richer structure from text. Flow Graphs \cite{mori2014flow} connect ingredients, tools, and actions with typed edges (200 annotated Japanese recipes) but conflate temporal and causal links and provide no released parser. Ingredient–Instruction Dependency Trees \cite{jermsurawong2015structure} attempt to extract the structure of recipes into an ``Ingredient Merging Map'', achieving 93\% accuracy on 260 English recipes; however, ingredient state, environment, and concurrency are out of scope. Large-scale information-extraction pipelines pair NER with dependency-based relation extraction to normalize ingredients and link techniques, utensils, and items \cite{diwan2020named}. Systems that induce reduced action tuples/graphs from instructions via NER + SRL likewise report persistent errors with coreference and with unstated or implicitly chosen tools/containers \cite{agarwal2011ie}.
 
-To evaluate procedural competence, Nevens et. al. \cite{nevens2024benchmark} map recipes to 38 executable kitchen actions and execute them in qualitative and quantitative simulators; their semantic language tracks environment state and parameters, but a single gold plan per recipe penalizes valid alternatives. Emerging latent program approaches jointly learn image/recipe/program embeddings \cite{papadopoulos2022programs} or mine sentence-level trees for generation/retrieval \cite{wang2023structural}, yet the induced programs remain opaque sequences lacking explicit environment transfers, collapsing intermediate states, and omitting concurrency.
+To evaluate procedural competence, Nevens et al. \cite{nevens2024benchmark} map recipes to 38 executable kitchen actions and execute them in qualitative and quantitative simulators; their semantic language tracks environment state and parameters, but a single gold plan per recipe penalizes valid alternatives. Emerging latent program approaches jointly learn image/recipe/program embeddings \cite{papadopoulos2022programs} or mine sentence-level trees for generation/retrieval \cite{wang2023structural}, yet the induced programs remain opaque sequences lacking explicit environment transfers, collapsing intermediate states, and omitting concurrency.
 
 Authoring-oriented DSLs emphasize metadata and validation. Corel \cite{roorda2021corel} types ingredients, tools, time, temperature, and nutrition and compiles to web pages, but omits environment tracking and time-relative processes.
 
